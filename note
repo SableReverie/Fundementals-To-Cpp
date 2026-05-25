@@ -1,0 +1,39 @@
+1. What is a Data Structure?
+
+A data structure is a way to store and organize data so that it can be used efficiently.
+
+Examples
+
+Array → stores items in a continuous block
+
+Vector → dynamic array that grows
+
+Linked list → each element points to the next
+
+Stack → LIFO (last in, first out)
+
+Queue → FIFO (first in, first out)
+
+Tree → hierarchical
+
+Graph → nodes & edges
+
+Hash table → fast lookup (like unordered_map)
+
+2. What is an Algorithm?
+
+An algorithm is a step-by-step procedure to solve a problem.
+
+Examples:
+
+Searching
+
+Sorting
+
+Pathfinding
+
+Optimizing
+
+Matching
+
+Good algorithms are fast and efficient.
