@@ -551,3 +551,22 @@ int main() {
     delete animal;
 }
 */ // const_cast = Const correction , reinterpret_cast = Low-level systems work only (not safe).
+
+// Memory Adresses
+#include <iostream>
+
+int main(){
+
+    // memory adress = a location in memory where data is stored
+    // a memory adress can be accessed with & (adress-of operator)
+
+    std::string name = "Prince";
+    int age = 21;
+    bool student = true;
+
+    std::cout << &name << std::endl;
+    std::cout << &age << std::endl;
+    std::cout << &student << std::endl;
+
+    return 0;
+}
