@@ -427,6 +427,7 @@ int main() {
     return 0;
 }
 */
+/*
 #include <iostream>
 int add(int a, int b){
     return a + b;
@@ -436,3 +437,117 @@ int main(){
     std::cout << add(5, 2) << std::endl;
     return 0;
 }
+*/
+
+/*
+// IMPLICIT TYPE CONVERSION (AUTOMATIC)
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 10;
+    double result = num;   // int converted to double automatically
+
+    cout << "num = " << num << endl;
+    cout << "result = " << result << endl;
+
+    return 0;
+}
+*/
+/*
+// EXPLICIT TYPE CONVERSION (Type Casting)
+#include <iostream>
+using namespace std;
+
+int main() {
+    double price = 19.99;
+
+    int wholeNumber = (int)price;
+
+    cout << "Original value: " << price << endl;
+    cout << "Converted value: " << wholeNumber << endl;
+
+    return 0;
+}
+*/
+
+
+/*
+// static_cast 
+#include <iostream>
+using namespace std;
+
+int main() {
+    double score = 95.75;
+
+    int roundedScore = static_cast<int>(score);
+
+    cout << "Score: " << score << endl;
+    cout << "Converted Score: " << roundedScore << endl;
+
+    return 0;
+}
+*/
+
+/*
+// dynamic_cast
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    virtual void speak() {
+        cout << "Animal" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void bark() {
+        cout << "Woof!" << endl;
+    }
+};
+
+int main() {
+    Animal* animal = new Dog();
+
+    Dog* dog = dynamic_cast<Dog*>(animal);
+
+    if (dog) {
+        dog->bark();
+    } else {
+        cout << "Conversion failed" << endl;
+    }
+
+    delete animal;
+    return 0;
+}
+*/
+/*
+// failed dynamic_cast
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    virtual ~Animal() {}
+};
+
+class Dog : public Animal {
+};
+
+class Cat : public Animal {
+};
+
+int main() {
+    Animal* animal = new Cat();
+
+    Dog* dog = dynamic_cast<Dog*>(animal);
+
+    if (dog == nullptr) {
+        cout << "Not a Dog!" << endl;
+    }
+
+    delete animal;
+}
+*/ // const_cast = Const correction , reinterpret_cast = Low-level systems work only (not safe).
