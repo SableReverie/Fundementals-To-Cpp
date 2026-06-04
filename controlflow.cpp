@@ -237,7 +237,7 @@ int main(){
 }
 */
 // ATM 
-
+/*
 #include <iostream>
 
 int main() {
@@ -280,12 +280,174 @@ int main() {
 
     return 0;
 }
+*/
+/*
+#include <iostream>
+using std::endl, std::cout, std::cin;
+int main(){
 
+    int day;
 
+    cout << "Enter The day of the week: ";
+    cin >> day;
 
+    switch(day){
+        case 1: {
+            cout << "It's Monday!";
+            break;
+        }
+        case 2: {
+            cout << "It's Tuesday!";
+            break;
+        }
+        case 3: {
+            cout << "It's Wednesday!";
+            break;
+        }
+        case 4: {
+            cout << "It's Thursday!";
+            break;
+        }
+        case 5: {
+            cout << "It's Friday!";
+            break;
+        }
+        default:
+        cout << "Invalid Input!";
+    }
+    return 0;
+}
+*/
+/*
+#include <iostream>
+#include <iomanip>
 
+using namespace std;
 
+int main() {
+    int choice;
+    int quantity;
+    double totalAmount = 0.0;
+    
+    // Set output format for currency
+    cout << fixed << setprecision(2);
 
+    do {
+        // Display Main Menu
+        cout << "\n====== RESTAURANT MENU ======" << endl;
+        cout << "1. Burger - $5.99" << endl;
+        cout << "2. Pizza - $9.99" << endl;
+        cout << "3. Fries - $2.49" << endl;
+        cout << "4. Exit" << endl;
+        cout << "=============================" << endl;
+        cout << "Enter your choice (1-4): ";
+        cin >> choice;
+
+        switch(choice) {
+            case 1:
+                cout << "Enter quantity for Burger: ";
+                cin >> quantity;
+                totalAmount += (5.99 * quantity);
+                cout << quantity << " Burger(s) added to your cart." << endl;
+                break;
+            case 2:
+                cout << "Enter quantity for Pizza: ";
+                cin >> quantity;
+                totalAmount += (9.99 * quantity);
+                cout << quantity << " Pizza(s) added to your cart." << endl;
+                break;
+            case 3:
+                cout << "Enter quantity for Fries: ";
+                cin >> quantity;
+                totalAmount += (2.49 * quantity);
+                cout << quantity << " order(s) of Fries added to your cart." << endl;
+                break;
+            case 4:
+                cout << "\nExiting system..." << endl;
+                cout << "Total Bill: $" << totalAmount << endl;
+                cout << "Thank you for dining with us!" << endl;
+                break;
+            default:
+                cout << "Invalid choice! Please select a valid option (1-4)." << endl;
+        }
+    } while(choice != 4);
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+
+using std::endl, std::cout, std::cin;
+
+int main(){
+
+    
+    for(int i = 1; i <= 10; i++){
+        cout << i << '\n';
+    }
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+
+using std::endl, std::cout, std::cin;
+
+int main(){
+
+    for(int i = 10; i >= 0; i--){
+        cout << i << '\n';
+    }
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+using std::cout, std::endl, std::cin;
+int main(){
+    int num = 5;
+    for(int i = 1; i <= 10; ++i){
+        cout << num << " x " << i << " = " << (num * i) << '\n'; 
+    }
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+
+int main() {
+    int n = 0;
+    int sum = 0;
+    // Take input from the user
+    std::cout << "Enter a number: ";
+    std::cin >> n;
+
+    // Loop from 1 to n and add each number to sum
+    for (int i = 1; i <= n; ++i) {
+        sum += i;
+    }
+
+    // Output the final result
+    std::cout << sum << std::endl;
+
+    return 0;
+}
+*/
+
+#include <iostream>
+
+int main(){
+    int num = 1;
+    while(num <= 10){
+        std::cout << num << std::endl;
+        num++;
+    }
+    return 0;
+}
 
 
 
