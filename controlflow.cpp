@@ -437,7 +437,7 @@ int main() {
     return 0;
 }
 */
-
+/*
 #include <iostream>
 
 int main(){
@@ -448,12 +448,183 @@ int main(){
     }
     return 0;
 }
+*/
+/*
+#include <iostream>
+#include <string>
 
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::getline;
 
+int main() {
 
+    const string User = "Prince";
+    const int Password = 123;
 
+    string inputUser;
+    int inputPassword;
 
+    bool LoggedIn = false;
 
+    while (!LoggedIn) {
+
+        cout << "Enter your username: ";
+        getline(cin, inputUser);
+
+        cout << "Enter your password: ";
+        cin >> inputPassword;
+
+        // Clear leftover newline character
+        cin.ignore();
+
+        if (inputUser == User && inputPassword == Password) {
+            cout << "\nAccess Granted! Welcome back, " << User << "." << endl;
+            LoggedIn = true;
+        } else {
+            cout << "\nInvalid username or password. Please try again.\n" << endl;
+        }
+    }
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 1234;
+    int reversedNum = 0;
+    int remainder;
+
+    // Loop continues until all digits are extracted
+    while (num != 0) {
+        remainder = num % 10;                  // Extract the last digit
+        reversedNum = reversedNum * 10 + remainder; // Shift existing digits and add new one
+        num /= 10;                             // Remove the last digit from the original number
+    }
+
+    cout << "Output: " << reversedNum << endl;
+
+    return 0;
+}
+*/
+// ============================= DO-WHILE LOOP ===============================
+/*
+#include <iostream>
+
+int main(){
+    int choice;
+    
+    do{
+        std::cout << "1. BuyFood? " << '\n';
+        std::cout << "2. Exit? " << '\n';
+        std::cin >> choice;
+        switch(choice){
+            case 1: {
+                std::cout << "Pizza: " << '\n';
+                break;
+            }
+            case 2: {
+                std::cout << "Thankyou for shopping!" << '\n';
+                break;
+            }
+            default: {
+                std::cout << "Invalid Choice!" << '\n';
+                break;
+            }
+        }
+    } while(choice != 2);
+
+    return 0;
+}
+*/
+
+/*
+#include <iostream>
+using std::cout, std::cin, std::endl;
+int main(){
+    int num;
+    do{
+        cout << "Enter a positive number: ";
+        cin >> num;
+        if(num > 0){
+            cout << "The number is positive!" << '\n';
+        } else {
+            cout << "The number is negative!";
+        } 
+    } while(num < 0);   
+    return 0;
+}
+*/
+
+/*
+#include <iostream>
+#include <limits>
+using std::cout, std::cin;
+int main(){
+    
+    int CorrectGuess = 10;
+    int guess;
+    do{
+        cout << "GUESS THE NUMBER!" << '\n';
+        cout << "Enter your guess: ";
+        cin >> guess;
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        if(guess > CorrectGuess){
+            cout << "The number is too high!" << '\n';
+        } else if (guess < CorrectGuess){
+            cout << "The number is too low!" << '\n';
+        } else {
+            cout << "Correct! You guessed the number!" << '\n';
+        } 
+    } while (guess != CorrectGuess);
+    return 0;
+}
+*/
+// ============================================ BREAK ==============================
+/*
+#include <iostream>
+
+int main(){
+
+    for(int i = 1; i <= 100; i++){
+        std::cout << i << '\n';
+        if(i == 50){
+            break;
+        } 
+    }
+    return 0;
+}
+*/
+
+#include <iostream>
+
+int main(){
+    
+    int array[] = {10, 20, 30, 40};
+    int target;
+    bool found = false;
+
+    std::cout << "Enter a number to search: " << '\n';
+    std::cin >> target;
+
+    for(int i = 0; i < 5; i++){
+        if(array[i] == target){
+            std::cout << "Found at the index " << i << '\n';
+            found = true;
+            break;
+        }
+    }
+    if(!found){
+        std::cout << "Number not found!";
+    }
+    return 0;
+}
 
 
 
