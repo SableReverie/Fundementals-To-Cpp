@@ -601,7 +601,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 #include <iostream>
 
 int main(){
@@ -625,6 +625,49 @@ int main(){
     }
     return 0;
 }
+*/
+#include <iostream>
+#include <limits>
+int main(){
+
+    int const Max_Attemp = 3;
+    int attemp;
+    int UserInput;
+    bool AccessGranted = false; 
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
