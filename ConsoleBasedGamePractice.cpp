@@ -257,3 +257,150 @@ int main() {
 }
 */
 
+// ============================== TIC TAC TOE =============================================
+/*
+#include <iostream>
+using std::endl, std::cin, std::cout;
+
+char board[3][3];
+char currentPlayer;
+
+// Initialize board
+void initializeBoard() {
+    char position = '1';
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            board[i][j] = position++;
+        }
+    }
+
+    currentPlayer = 'X';
+}
+
+// Display board
+void displayBoard() {
+    cout << "\n";
+
+    for (int i = 0; i < 3; i++) {
+        cout << " " << board[i][0] << " | "
+             << board[i][1] << " | "
+             << board[i][2] << "\n";
+
+        if (i < 2)
+            cout << "-----------\n";
+    }
+
+    cout << "\n";
+}
+
+// Make move
+bool makeMove(int choice) {
+    int row = (choice - 1) / 3;
+    int col = (choice - 1) % 3;
+
+    if (choice < 1 || choice > 9)
+        return false;
+
+    if (board[row][col] == 'X' || board[row][col] == 'O')
+        return false;
+
+    board[row][col] = currentPlayer;
+    return true;
+}
+
+// Check winner
+bool checkWinner() {
+    // Rows
+    for (int i = 0; i < 3; i++) {
+        if (board[i][0] == currentPlayer &&
+            board[i][1] == currentPlayer &&
+            board[i][2] == currentPlayer)
+            return true;
+    }
+
+    // Columns
+    for (int i = 0; i < 3; i++) {
+        if (board[0][i] == currentPlayer &&
+            board[1][i] == currentPlayer &&
+            board[2][i] == currentPlayer)
+            return true;
+    }
+
+    // Diagonals
+    if (board[0][0] == currentPlayer &&
+        board[1][1] == currentPlayer &&
+        board[2][2] == currentPlayer)
+        return true;
+
+    if (board[0][2] == currentPlayer &&
+        board[1][1] == currentPlayer &&
+        board[2][0] == currentPlayer)
+        return true;
+
+    return false;
+}
+
+// Check draw
+bool checkDraw() {
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (board[i][j] != 'X' && board[i][j] != 'O')
+                return false;
+        }
+    }
+    return true;
+}
+
+// Switch player
+void switchPlayer() {
+    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+}
+
+int main() {
+    char playAgain;
+
+    do {
+        initializeBoard();
+
+        bool gameOver = false;
+
+        while (!gameOver) {
+            displayBoard();
+
+            int choice;
+            cout << "Player " << currentPlayer
+                 << ", enter position (1-9): ";
+            cin >> choice;
+
+            if (!makeMove(choice)) {
+                cout << "Invalid move! Try again.\n";
+                continue;
+            }
+
+            if (checkWinner()) {
+                displayBoard();
+                cout << "🎉 Player " << currentPlayer
+                     << " wins!\n";
+                gameOver = true;
+            }
+            else if (checkDraw()) {
+                displayBoard();
+                cout << "It's a draw!\n";
+                gameOver = true;
+            }
+            else {
+                switchPlayer();
+            }
+        }
+
+        cout << "\nPlay again? (Y/N): ";
+        cin >> playAgain;
+
+    } while (playAgain == 'Y' || playAgain == 'y');
+
+    cout << "Thanks for playing!\n";
+
+    return 0;
+}
+*/
