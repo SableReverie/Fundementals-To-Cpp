@@ -1,0 +1,16 @@
+Error Type	               Compile?	     Run?
+Syntax Error	           ❌	        ❌
+Compilation Error	       ❌	        ❌
+Logical Error	           ✅	        ✅ (wrong output)
+Runtime Error	           ✅	        ❌
+Index Out of Bounds	       ✅	        ⚠️ Undefined behavior
+Infinite Loop	           ✅	        ⚠️ Never ends
+Concurrency Issue	       ✅	        ⚠️ Wrong results
+I/O Error	               ✅	        ⚠️ File operation fails
+Environment Dependency	   ✅	        ⚠️ Platform-specific failure
+Integration Error	       ❌/⚠️	        ❌/⚠️
+Reference Error	           ✅	        ⚠️ Undefined behavior
+Type Error	               ❌	        ❌
+
+SEMANTIC Error = Same to the syntax error but A syntax error is a violation of the grammatical rules of a programming language, while a semantic error occurs when the code is grammatically correct but performs an operation that makes no sense or is impossible to execute.
+LINK ERROR = Something externally isn't found like a Reference
