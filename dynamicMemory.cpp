@@ -175,3 +175,129 @@ int main()
 
     return 0;
 }
+/*
+    Important Rule
+
+    Always match:
+
+    new      -> delete
+    new[]    -> delete[]
+
+    Correct:
+
+    int* arr = new int[5];
+
+    delete[] arr;
+
+    Wrong:
+
+    int* arr = new int[5];
+
+    delete arr; // WRONG
+
+    This causes undefined behavior.
+*/
+
+// =============================== Memory Leaks ===================================
+
+// A memory leak happens when dynamically allocated memory is never released. The program loses access to the memory, but the memory remains occupied.
+/*
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int* ptr = new int(100);
+
+    // Forgot delete
+
+    return 0;
+}
+*/
+/*
+    Heap
+    ----
+    100
+
+    After the program loses the pointer, the memory cannot be reused.
+*/
+
+/*
+    Another Memory Leak Example
+    
+    int* ptr = new int(10);
+
+    ptr = new int(20);
+  ====================================
+    What happened?
+    
+    First allocated memory (10)
+        ↑
+    No pointer points to it anymore
+
+    The first memory block is lost forever.
+ =====================================
+    Correct:
+
+    int* ptr = new int(10);
+
+    delete ptr;
+
+    ptr = new int(20);
+
+    delete ptr;
+ ======================================
+*/
+
+// =========================== Dangling Pointers ==================================
+// A dangling pointer points to memory that has already been freed.
+
+/*
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int* ptr = new int(50);
+
+    delete ptr;
+
+    cout << *ptr; // Dangerous
+
+    return 0;
+}
+*/
+
+/*
+    ptr ---> Memory already deleted
+
+    Accessing it may:
+
+    Crash the program
+    Show garbage values
+    Cause unpredictable behavior
+*/
+
+
+
+// SAFER 
+/*
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int* ptr = new int(50);
+
+    delete ptr;
+
+    ptr = nullptr;
+
+    return 0;
+}
+*/
+/*
+    Stack = Automatic memory management
+
+    Heap = Manual memory management
+*/

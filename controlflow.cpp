@@ -626,17 +626,45 @@ int main(){
     return 0;
 }
 */
+/*
 #include <iostream>
 #include <limits>
-int main(){
 
-    int const Max_Attemp = 3;
-    int attemp;
+int main() {
+    const int Max_Attempt = 3;
     int UserInput;
-    bool AccessGranted = false; 
-    
+    bool AccessGranted = false;
+    const int CorrectPassword = 123;
+
+    for (int attempt = 1; attempt <= Max_Attempt; attempt++) {
+        std::cout << "Enter the correct password: ";
+
+        if (!(std::cin >> UserInput)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid Input!\n";
+            attempt--;  // Don't count invalid input
+            continue;
+        }
+
+        if (UserInput == CorrectPassword) {
+            std::cout << "Access Granted!\n";
+            AccessGranted = true;
+            break;
+        } else {
+            std::cout << "Incorrect Password! "
+                      << (Max_Attempt - attempt)
+                      << " attempt(s) remaining.\n";
+        }
+    }
+
+    if (!AccessGranted) {
+        std::cout << "Maximum attempts reached!\n";
+    }
+
     return 0;
 }
+*/
 
 
 

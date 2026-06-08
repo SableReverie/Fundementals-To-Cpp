@@ -1080,7 +1080,7 @@ int main()
     return 0;
 }
 */
-
+/*
 // STRING MANIPULATION 
 // Length Of The String
 // Access Characters
@@ -1097,8 +1097,8 @@ int main(){
     string first = "Gian";
     string last = "Cultura";
     string text = "Hello";
-    string word = "Cat";
-    string word1 = "Programming";
+    string word = "Cat"; 
+    string word1 = "Programming"; // 0, 1, 2, 3
     cout << name.length() << '\n';
     cout << name[0];
     string full = first + " " + last;
@@ -1111,8 +1111,10 @@ int main(){
 
     cout << word << '\n';
 
+    cout << word.find('g'); 
 
-
+    cout << text.substr(0, 4);
 
     return 0;
 }
+*/

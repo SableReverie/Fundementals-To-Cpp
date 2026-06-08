@@ -306,3 +306,229 @@ int main() {
     return 0;
 }
 */
+
+/*
+=========================================================
+6. REFERENCES IN C++
+=========================================================
+
+1. REFERENCE VARIABLES
+---------------------------------------------------------
+A reference is an alias (another name) for an existing variable.
+
+Syntax: 
+    int x = 10;
+    int &ref = x;
+
+Example:
+    int x = 10;
+    int &ref = x;
+
+    ref = 20; // x also becomes 20
+
+Notes:
+- Must be initialized when declared.
+- Cannot be null.
+- Cannot refer to another variable later.
+- Shares the same memory location as the original variable.
+
+---------------------------------------------------------
+
+2. PASS BY REFERENCE
+---------------------------------------------------------
+Allows a function to modify the original variable.
+
+Pass by Value:
+    void increment(int x) {
+        x++;
+    }
+
+    int num = 5;
+    increment(num);
+
+Result:
+    num is still 5 because x is a copy.
+
+Pass by Reference:
+    void increment(int &x) {
+        x++;
+    }
+
+    int num = 5;
+    increment(num);
+
+Result:
+    num becomes 6 because x refers to num.
+
+Benefits:
+- Can modify original data.
+- Avoids unnecessary copying.
+- More efficient for large objects.
+
+Example:
+    void swapNumbers(int &a, int &b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+---------------------------------------------------------
+
+3. CONST REFERENCES
+---------------------------------------------------------
+A const reference allows access to a variable
+without allowing modifications.
+
+Syntax:
+    const int &ref = x;
+
+Example:
+    int x = 100;
+    const int &ref = x;
+
+    // ref = 200; // ERROR
+
+Why use const references?
+- Prevent accidental modification.
+- Avoid copying large objects.
+- Improve performance.
+
+Function Example:
+    void printString(const string &str) {
+        cout << str;
+    }
+
+Advantages:
+- No copy is made.
+- Original data is protected.
+
+Can bind to temporary values:
+    const int &ref = 50; // Valid
+
+Normal reference:
+    int &ref = 50; // ERROR
+
+---------------------------------------------------------
+
+4. REFERENCE VS POINTER
+---------------------------------------------------------
+
+Reference:
+    int x = 10;
+    int &ref = x;
+
+Pointer:
+    int x = 10;
+    int *ptr = &x;
+
+Comparison:
+
+Reference:
+✔ Must be initialized
+✔ Cannot be null
+✔ Cannot be reassigned
+✔ No dereferencing required
+✔ Safer and easier to use
+
+Pointer:
+✔ Can be null (nullptr)
+✔ Can be reassigned
+✔ Requires dereferencing (*ptr)
+✔ Stores memory addresses
+✔ More flexible
+
+Reference Example:
+    int a = 10;
+    int &ref = a;
+
+Pointer Example:
+    int a = 10;
+    int *ptr = &a;
+
+---------------------------------------------------------
+
+REFERENCE REASSIGNMENT
+---------------------------------------------------------
+
+int a = 10;
+int b = 20;
+
+int &ref = a;
+
+ref = b;
+
+Result:
+    a becomes 20
+    ref still refers to a
+
+References cannot change what they refer to.
+
+---------------------------------------------------------
+
+POINTER REASSIGNMENT
+---------------------------------------------------------
+
+int a = 10;
+int b = 20;
+
+int *ptr = &a;
+ptr = &b;
+
+Result:
+    ptr now points to b
+
+Pointers can change targets.
+
+---------------------------------------------------------
+
+WHEN TO USE EACH
+---------------------------------------------------------
+
+Use Reference:
+    void updateScore(int &score);
+
+Use Const Reference:
+    void display(const string &name);
+
+Use Pointer:
+    void printValue(int *ptr);
+
+Choose:
+- &      -> modify caller's variable
+- const& -> read-only, efficient
+- *      -> nullable or address manipulation
+
+=========================================================
+QUICK SUMMARY
+=========================================================
+
+Reference Variable:
+    int x = 10;
+    int &ref = x;
+
+Pass By Reference:
+    void change(int &x) {
+        x = 100;
+    }
+
+Const Reference:
+    void show(const string &s) {
+        cout << s;
+    }
+
+Reference vs Pointer:
+    int &ref = x;   // alias
+    int *ptr = &x;  // address
+
+References:
+- Simpler
+- Safer
+- Cannot be null
+
+Pointers:
+- Flexible
+- Can be null
+- Can be reassigned
+
+=========================================================
+*/
