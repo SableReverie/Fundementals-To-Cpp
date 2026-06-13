@@ -1,0 +1,19 @@
+                  ┌──────────────────────────────────────────┐
+                  │          MODERN C++ PARADIGMS            │
+                  └────────────────────┬─────────────────────┘
+                                       │
+         ┌─────────────────────────────┼─────────────────────────────┐
+         ▼                             ▼                             ▼
+┌─────────────────┐           ┌─────────────────┐           ┌─────────────────┐
+│   PROCEDURAL    │           │     GENERIC     │           │   DATA-ORIENTED │
+│  Focus: Steps   │           │Focus: Templates │           │ Focus: Memory   │
+│  and Functions  │           │ and Performance │           │   Efficiency    │
+└─────────────────┘           └─────────────────┘           └─────────────────┘
+
+
+Imperitive programming in C++,          vs,              Declarative Programming in C++
+
+- Procedural Programming Paradigm                        Logic Programming Paradigm
+- Object Oriented Programming                            Functional Programming 
+- Parallel Processing Approach                           Data Processing Approach
+
