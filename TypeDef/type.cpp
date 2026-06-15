@@ -1,0 +1,2 @@
+// In C++, typedef is a reserved keyword used to create a type alias (an alternative nickname) for an existing data type. 
+// It does not create a completely new data type; it simply gives a new name to a type that already exists
