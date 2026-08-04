@@ -17,3 +17,30 @@ Imperitive programming in C++,          vs,              Declarative Programming
 - Object Oriented Programming                            Functional Programming 
 - Parallel Processing Approach                           Data Processing Approach
 
+
+Key Rules to Remember:
+1. Focus on growth, not exact time.
+2. Big O describes how an algorithm scales as the input grows.
+3. Assume the worst case unless stated otherwise.
+4. This gives a reliable upper bound on performance.
+Drop constants.
+O(2n) → O(n)
+
+Drop non-dominant terms.
+O(n² + n) → O(n²)
+
+Nested loops usually multiply.
+Two loops over the same input → O(n²)
+
+Separate independent inputs.
+Two arrays → O(n + m) or O(n × m)
+
+Know common data structure operations.
+For arrays/vectors: indexing is O(1), searching is O(n), inserting or deleting at the front is O(n).
+
+How to Analyze Any Algorithm:
+1. Count how many times the main operation executes.
+2. Identify loops and whether they are sequential (+) or nested (×).
+3. See if the input size is reduced each step (often O(log n)).
+4. Simplify by dropping constants and non-dominant terms.
+5. Express the final result using Big O notation.
