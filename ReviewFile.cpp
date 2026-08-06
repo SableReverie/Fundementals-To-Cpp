@@ -240,17 +240,16 @@ for (int i = 0; i < sizeof(myNumbers) / sizeof(myNumbers[0]); i++) {
 
 // Multi-Dimensional Arrays
 
+/*
 #include <iostream>
 using namespace std;
-// grid[row][column]
-/*
-      Column
-      0  1  2
-Row
-0     1  2  3
-1     4  5  6
-2     7  8  9
-*/
+//      Column
+//      0  1  2
+//Row
+//0     1  2  3
+//1     4  5  6
+//2     7  8  9
+
 int main () {
 
     int numbers[3][5] = {
@@ -267,4 +266,131 @@ int main () {
     }
 
   return 0;
+}
+*/
+/*
+#include <iostream>
+using namespace std;
+int main(){
+    int rowSum = 0;
+    int scores[3][4] = {
+    {10, 20, 30, 40},
+    {15, 25, 35, 45},
+    {50, 60, 70, 80}
+};
+// calculate the sum of each row
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 4; j++) {
+            rowSum += scores[i][j];
+    }
+    cout << "Sum of row " << i << ": " << rowSum << endl;
+}
+    return 0;
+}
+*/
+/*
+#include <iostream>
+using namespace std;
+
+int main(){
+    // Find the Largest Number and print the row and column
+    int values[4][3] = {
+    {8, 12, 5},
+    {20, 3, 15},
+    {7, 25, 10},
+    {9, 18, 6}
+};
+
+    int largest = values[0][0];
+    int largestRow = 0;
+    int largestCol = 0;
+
+    for(int i = 0; i < 4; i++) {
+        for(int j = 0; j < 3; j++) {
+            if(values[i][j] > largest) {
+                largest = values[i][j];
+                largestRow = i;
+                largestCol = j;
+            }
+        }
+    }
+
+    cout << "Largest number: " << largest << endl;
+    cout << "Row: " << largestRow << ", Column: " << largestCol << endl;
+
+    return 0;
+}
+*/
+/*
+// Count Even and Odd Numbers in a 2D Array
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int nums[3][5] = {
+    {4, 7, 10, 13, 16},
+    {1, 8, 5, 12, 19},
+    {20, 21, 22, 23, 24}
+};
+    int evenCount = 0;
+    int oddCount = 0;
+
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 5; j++) {
+            if(nums[i][j] % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+    }
+
+    cout << "Even numbers: " << evenCount << endl;
+    cout << "Odd numbers: " << oddCount << endl;
+
+    return 0;
+}
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int matrix[4][4] = {
+        {5, 8, 2, 1},
+        {7, 9, 6, 4},
+        {3, 10, 12, 11},
+        {15, 14, 13, 16}
+    };
+
+    int target;
+    bool found = false;
+
+    cout << "Enter a number to search: ";
+    cin >> target;
+
+    // Loop through each row
+    for (int row = 0; row < 4; row++)
+    {
+        // Loop through each column
+        for (int col = 0; col < 4; col++)
+        {
+            if (matrix[row][col] == target)
+            {
+                cout << "Found at Row " << row
+                     << ", Column " << col << endl;
+
+                found = true;
+            }
+        }
+    }
+
+    if (!found)
+    {
+        cout << "Number not found." << endl;
+    }
+
+    return 0;
 }
