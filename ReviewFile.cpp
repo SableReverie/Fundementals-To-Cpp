@@ -1,0 +1,270 @@
+/*
+#include <iostream>
+using std::cout, std::endl;
+
+int main() {
+    
+    char charArray[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'};
+    for (int i = 0; i < 12; i++) {
+        cout << charArray[i];
+    }
+    cout << endl;
+
+}
+*/
+/*
+#include <iostream>
+#include <string>
+using std::cout, std::endl, std::string;
+int main() {
+    // Array of characters (must be null-terminated with '\0')
+    char charArray[] = {'H', 'e', 'l', 'l', 'o', '\0'}; 
+    
+    // Pass it directly to the constructor
+    string str(charArray); 
+    
+    cout << str; // Outputs: Hello
+}
+*/
+/*
+#include <iostream>
+using std::cout, std::endl, std::string;
+int main(){
+
+    int myNum = 15;  // myNum is 15
+    myNum = 10;  // Now myNum is 10
+    cout << myNum;  // Outputs 10
+
+    return 0;
+}
+    
+*/
+/*
+#include <iostream>
+using std::cout, std::endl;
+
+int main() {
+
+    int x = 10;
+int y = 3;
+
+    cout << (x + y) << "\n"; // 13
+    cout << (x - y) << "\n"; // 7
+    cout << (x * y) << "\n"; // 30
+    cout << (x / y) << "\n"; // 3 (integer division)
+    cout << (x % y) << "\n"; // 1
+
+    int z = 5;
+    ++z;
+    cout << z << "\n"; // 6
+    --z;
+    cout << z << "\n"; // 5
+
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+using std::cout, std::endl, std::string;
+
+int main(){
+
+    string str1 = "Hello";
+    string str2 = "World";
+
+    string str3 = str1 + " " + str2; // Concatenation
+    cout << str3; // Outputs: Hello World
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+using std::cout, std::endl, std::string;
+
+int main(){
+    string firstName = "John ";
+    string lastName = "Doe";
+    string fullName = firstName.append(lastName);
+    cout << fullName;
+
+ return 0;
+}
+*/
+
+/*
+// STRING LENGTH
+
+#include <iostream>
+using std::cout, std::endl, std::string;
+
+int main(){
+    
+    string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    cout << "The length of the txt string is: " << txt.size();
+
+
+    return 0;
+}
+*/
+/*
+#include <iostream>
+#include <cmath>
+using namespace std;
+// Include the cmath library
+
+int main () {
+cout << sqrt(64);
+cout << round(2.6);
+cout << log(2);
+return 0;
+}
+*/
+/*
+#include <iostream>
+using namespace std;
+
+int main() {
+  bool isCodingFun = true;
+  bool isFishTasty = false;
+
+  cout << boolalpha; // enable printing "true"/"false"
+
+  cout << isCodingFun << "\n";   // Outputs true
+  cout << isFishTasty << "\n";  // Outputs false
+  return 0;
+}
+*/
+
+/*
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  int time = 20;
+  string result = (time < 18) ? "Good day." : "Good evening.";
+  cout << result;
+  return 0;
+}
+*/
+
+/*
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  int time = 22;
+  string message = (time < 12) ? "Good morning."
+    : (time < 18) ? "Good afternoon."
+    : "Good evening.";
+  cout << message;
+  return 0;
+}
+*/
+
+
+/*
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    string cars[5] = {"Volvo", "BMW", "Ford", "Mazda", "Toyota"};
+    for (int i = 0; i < 5; i++) {
+        cout << cars[i] << "\n";
+    }
+    return 0;
+}
+*/
+/*
+notes for vectors:
+vector<int> v1 = {1, 2, 3}; // create a vector of integers with initial values
+v1.push_back(4); // add an element to the end of the vector
+v1.pop_back(); // remove the last element from the vector
+v1.back(); // access the last element of the vector
+v1.front(); // access the first element of the vector
+v1.size(); // get the number of elements in the vector
+v1.clear(); // remove all elements from the vector
+v1.empty(); // check if the vector is empty
+v1.insert(v1.begin() + 1, 5); // insert an element at a specific position
+v1.erase(v1.begin() + 1); // remove an element at a specific position
+v1.resize(10); // change the size of the vector
+v1.reserve(20); // reserve space for a certain number of elements
+v1.shrink_to_fit(); // reduce the capacity of the vector to fit its size
+v1.swap(v2); // swap the contents of two vectors
+v1.assign(5, 10); // assign new values to the vector
+v1.emplace_back(6); // construct and add an element to the end of the vector
+v1.emplace(v1.begin() + 1, 7); // construct and insert an element at a specific position
+v1.at(2); // access an element at a specific position with bounds checking
+v1.data(); // get a pointer to the underlying array of the vector
+v1.capacity(); // get the number of elements that can be held in currently allocated storage
+v1.shrink_to_fit(); // reduce the capacity of the vector to fit its size
+v1.clear(); // remove all elements from the vector
+
+// ITERATING THROUGH VECTORS
+vector<int> v1 = {1, 2, 3, 4, 5};
+for (int i = 0; i < v1.size(); i++) {
+    cout << v1[i] << " ";
+}
+    for(auto itr = v1.begin(); itr != v1.end(); ++itr) {
+        cout << *itr << " ";
+    }
+*/
+
+
+/*
+// GET THE SIZE OF AN ARRAY
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+cout << sizeof(myNumbers) / sizeof(myNumbers[0]);
+cout << getArraySize(myNumbers) << endl;
+*/
+
+// Loop Through an Array with sizeof()
+// instead of
+
+// int myNumbers[5] = {10, 20, 30, 40, 50};
+// for (int i = 0; i < sizeof(myNumbers) / sizeof(myNumbers[0]); i++) {
+//     cout << myNumbers[i] << " ";
+// }
+// IT is better to write a function to get the size of an array, like this:
+/*
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i = 0; i < sizeof(myNumbers) / sizeof(myNumbers[0]); i++) {
+  cout << myNumbers[i] << "\n";
+}
+*/
+
+// Multi-Dimensional Arrays
+
+#include <iostream>
+using namespace std;
+// grid[row][column]
+/*
+      Column
+      0  1  2
+Row
+0     1  2  3
+1     4  5  6
+2     7  8  9
+*/
+int main () {
+
+    int numbers[3][5] = {
+        {1, 2, 3, 4, 5},
+        {6, 7, 8, 9, 10},
+        {11, 12, 13, 14, 15}
+    };
+
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 5; j++) {
+            cout << numbers[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
+  return 0;
+}
