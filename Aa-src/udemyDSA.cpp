@@ -167,3 +167,25 @@ int main() {
     return 0;
 }
 */
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    
+    int n = 5;
+    cout << &n << endl; // Prints the memory address of n
+    int *ptr = &n; // Pointer to n
+    cout << ptr << endl; // Prints the memory address stored in ptr (which is the
+    cout << *ptr << endl; // Dereferencing ptr to get the value of n
+    *ptr = 10; // Changing the value of n through the pointer
+    cout << *ptr << endl; // Prints the new value of n (10)
+    cout << n << endl; // Prints the new value of n (10)
+
+    int v;
+    int* ptr2 = &v; // Pointer to v
+    *ptr2 = 20; // Assigning value to v through the pointer
+    cout << v << endl; // Prints the value of v (20)
+    
+    return 0;
+}

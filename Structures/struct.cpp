@@ -231,4 +231,29 @@ int main()
     return 0;
 }
 */
+/*
+// =================================== Anonymous Struct ====================================
+// An anonymous struct is a struct without a name. It is useful when you want to create    
+// Option 2: Anonymous Struct (Closest to your original code)Declare the variable myStructure directly inline with the definition. This is a common pattern shown in introductory tutorials like the W3Schools Struct Access Demo.cpp#include <iostream>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // Define the struct and instantiate the variable inline
+    struct {
+        int myNum;
+        string myString;
+    } myStructure; // <-- Variable name goes here before the semicolon
+
+    myStructure.myNum = 1;
+    myStructure.myString = "Hello World!";
+
+    cout << myStructure.myNum << "\n";
+    cout << myStructure.myString << "\n";
+
+    return 0;
+}
+*/
+
 

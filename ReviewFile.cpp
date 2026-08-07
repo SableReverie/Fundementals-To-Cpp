@@ -1,3 +1,4 @@
+// 'git push origin master'
 /*
 #include <iostream>
 using std::cout, std::endl;
@@ -352,7 +353,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -394,3 +395,146 @@ int main()
 
     return 0;
 }
+*/
+/*
+#include <iostream>
+using namespace std;
+
+int main() {
+  // We put "1" to indicate there is a ship.
+  bool ships[4][4] = {
+    { 0, 1, 1, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 1, 0 },
+    { 0, 0, 1, 0 }
+  };
+
+  // Keep track of how many hits the player has and how many turns they have played in these variables
+  int hits = 0;
+  int numberOfTurns = 0;
+
+  // Allow the player to keep going until they have hit all four ships
+  while (hits < 4) {
+    int row, column;
+
+    cout << "Selecting coordinates\n";
+
+    // Ask the player for a row
+    cout << "Choose a row number between 0 and 3: ";
+    cin >> row;
+
+    // Ask the player for a column
+    cout << "Choose a column number between 0 and 3: ";
+    cin >> column;
+
+    // Check if a ship exists in those coordinates
+    if (ships[row][column]) {
+      // If the player hit a ship, remove it by setting the value to zero.
+      ships[row][column] = 0;
+
+      // Increase the hit counter
+      hits++;
+
+      // Tell the player that they have hit a ship and how many ships are left
+      cout << "Hit! " << (4-hits) << " left.\n\n";
+    } else {
+      // Tell the player that they missed
+      cout << "Miss\n\n";
+    }
+
+    // Count how many turns the player has taken
+    numberOfTurns++;
+  }
+
+  cout << "Victory!\n";
+  cout << "You won in " << numberOfTurns << " turns";
+  
+  return 0;
+}
+*/
+
+/*
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+    // 1. Define the structure type (Note the semicolon at the end)
+    struct MyStructureType {
+        int myNum;
+        string myString;
+    };
+
+    // 2. Create an instance variable of that type
+    MyStructureType myStructure;
+
+    myStructure.myNum = 1;
+    myStructure.myString = "Hello World!";
+
+    cout << myStructure.myNum << "\n";
+    cout << myStructure.myString << "\n";
+
+    return 0;
+}
+*/
+/*
+// NEW AND DELETE MEMORY MANAGEMENT
+
+// The new keyword lets you manage memory yourself.
+// HEAP memory is a pool of memory that is used for dynamic memory allocation.
+#include <iostream>
+using namespace std;
+
+int main() {
+  int* ptr = new int;
+  *ptr = 35;
+  cout << *ptr;
+
+  // DON"T FORGET TO DELETE THE MEMORY WHEN YOU ARE DONE WITH IT
+  delete ptr; // Free the memory
+  return 0;
+}
+*/
+/*
+// Dynamic arrays are useful when you don't know the size of the array in advance 
+// - like when the size depends on user input or other values that are not known at the start of the program.
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  int numGuests;
+  cout << "How many guests? ";
+  cin >> numGuests;
+
+  // Check for invalid input
+  if (numGuests <= 0) {
+    cout << "Number of guests must be at least 1.\n";
+    return 0;
+  }
+
+  // Create memory space for x guests (an array of strings)
+  string* guests = new string[numGuests];
+
+  // Ignore the leftover newline character after reading numGuests
+  cin.ignore();
+
+  // Enter guest names
+  for (int i = 0; i < numGuests; i++) {
+    cout << "Enter name for guest " << (i + 1) << ": ";
+    getline(cin, guests[i]); // Read the full name (including spaces)
+  }
+
+  // Show all guests
+  cout << "\nGuests checked in:\n";
+  for (int i = 0; i < numGuests; i++) {
+    cout << guests[i] << "\n";
+  }
+
+  delete[] guests; // Clean up memory
+  return 0;
+}
+*/
+
+
