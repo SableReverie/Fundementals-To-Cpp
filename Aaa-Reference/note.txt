@@ -1,0 +1,354 @@
+1. C++ Fundamentals
+
+These are the absolute basics.
+
+What is C++
+Compilation process
+Source files and headers
+Variables
+Data types
+int
+float
+double
+char
+bool
+Constants
+Operators
+Arithmetic
+Assignment
+Comparison
+Logical
+Bitwise
+Input and output
+cin
+cout
+Comments
+Scope
+Type conversion
+Basic debugging
+2. Control Flow
+if
+if-else
+nested if
+switch
+for loop
+while loop
+do-while loop
+break
+continue
+goto (understand, rarely use)
+3. Functions
+Function declaration
+Function definition
+Function parameters
+Return values
+Pass by value
+Pass by reference
+Function overloading
+Default arguments
+Inline functions
+Recursion
+Lambda functions
+4. Arrays and Strings
+One-dimensional arrays
+Multi-dimensional arrays
+Character arrays
+C-style strings
+std::string
+String manipulation
+5. Pointers
+
+This is one of the most important topics.
+
+Learn:
+
+Memory addresses
+Pointer declaration
+Dereferencing
+Pointer arithmetic
+Null pointers
+Void pointers
+Double pointers
+Function pointers
+Pointers vs references
+6. References
+Reference variables
+Pass by reference
+const references
+Reference vs pointer
+7. Dynamic Memory
+Stack memory
+Heap memory
+new
+delete
+new[]
+delete[]
+Memory leaks
+Dangling pointers
+8. Structures
+struct
+Nested structs
+Arrays of structs
+9. Enumerations
+enum
+enum class
+10. Object-Oriented Programming
+
+Master this thoroughly.
+
+Classes
+Objects
+Access specifiers
+public
+private
+protected
+Constructors
+Destructors
+this pointer
+Static members
+Friend functions
+Encapsulation
+Abstraction
+Inheritance
+Polymorphism
+Virtual functions
+Pure virtual functions
+Abstract classes
+Multiple inheritance
+Operator overloading
+11. File Handling
+Reading files
+Writing files
+Binary files
+Text files
+Serialization basics
+12. Exception Handling
+try
+catch
+throw
+Exception hierarchy
+Custom exceptions
+13. Namespaces
+namespace
+using
+Scope resolution operator
+14. Templates
+
+One of the most important advanced topics.
+
+Function templates
+Class templates
+Template specialization
+Variadic templates
+15. Standard Template Library (STL)
+
+The heart of modern C++.
+
+Containers
+vector
+array
+deque
+list
+forward_list
+set
+multiset
+map
+multimap
+unordered_set
+unordered_map
+stack
+queue
+priority_queue
+Iterators
+begin()
+end()
+iterator categories
+Algorithms
+sort
+find
+count
+remove
+transform
+copy
+accumulate
+Function Objects
+Functors
+Lambdas
+16. Modern C++ (C++11–C++23)
+
+Critical for professional development.
+
+C++11
+auto
+nullptr
+range-based for
+move semantics
+smart pointers
+lambdas
+constexpr
+C++14
+Generic lambdas
+C++17
+Structured bindings
+std::optional
+std::variant
+std::any
+C++20
+Concepts
+Coroutines
+Modules
+Ranges
+C++23
+New standard library improvements
+17. Smart Pointers
+
+Very important.
+
+unique_ptr
+shared_ptr
+weak_ptr
+RAII
+18. Move Semantics
+
+A professional-level topic.
+
+L-values
+R-values
+Move constructor
+Move assignment
+std::move
+19. Data Structures
+
+Implement these yourself.
+
+Array
+Linked List
+Stack
+Queue
+Deque
+Hash Table
+Binary Tree
+BST
+Heap
+Trie
+Graph
+20. Algorithms
+Searching
+Sorting
+Recursion
+Divide and conquer
+Dynamic programming
+Greedy algorithms
+Graph algorithms
+21. Memory Management
+
+Very important for game engines.
+
+Stack
+Heap
+Memory layout
+Allocators
+Cache friendliness
+Object pools
+22. Multithreading
+Threads
+Mutex
+Locks
+Atomic operations
+Condition variables
+Thread pools
+23. Design Patterns
+Singleton
+Factory
+Observer
+Strategy
+Command
+Component
+State
+
+Game development uses these heavily.
+
+24. Build Systems
+Compiler flags
+Static libraries
+Dynamic libraries
+Makefiles
+CMake
+
+For modern C++, learn:
+
+CMake
+
+25. Testing
+Unit testing
+Assertions
+Test-driven development
+
+Popular frameworks:
+
+GoogleTest
+Catch2
+26. Debugging Tools
+GDB
+LLDB
+Visual Studio Debugger
+Memory analysis
+27. SDL Development
+
+After strong C++ knowledge:
+
+Window creation
+Input handling
+Rendering
+Textures
+Audio
+Timing
+Collision detection
+
+Using:
+
+Simple DirectMedia Layer
+
+28. Graphics Programming
+
+After SDL:
+
+Mathematics for graphics
+Vectors
+Matrices
+Transformations
+Shaders
+GPU pipeline
+
+Libraries/APIs:
+
+OpenGL
+Vulkan
+DirectX
+29. Game Engine Architecture
+
+Your long-term goal.
+
+Entity Component System (ECS)
+Rendering engine
+Physics engine
+Resource management
+Scene management
+Asset pipelines
+
+Study engines like:
+
+Godot Engine
+Unreal Engine
+30. Advanced Expert Topics
+Compiler internals
+Linkers
+Assembly basics
+CPU architecture
+SIMD
+Cache optimization
+Custom allocators
+Networking
+Serialization
+Reflection techniques
+Engine architecture

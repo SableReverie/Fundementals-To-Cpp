@@ -536,5 +536,54 @@ int main() {
   return 0;
 }
 */
+/*
+#include <iostream>
+
+int main (){
+
+    int x = 5;
+    int* ptr = &x;
+
+    std::cout << "The value of x: " << x << '\n';
+    std::cout << "The adress of x: " << &x << '\n';
+    std::cout << "The value of the pointer: " << *ptr << '\n';
+    std::cout << "The adress of the pointer: " << &ptr << '\n';
+    return 0;
+}
+*/
+/*
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20, 30};
+
+    int* ptr = arr;
+
+    cout << *ptr << endl;
+
+    ptr++;
+    cout << *ptr << endl;
+
+    ptr++;
+    cout << *ptr << endl;
+
+    return 0;
+}
+*/
 
 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20, 30};
+    int* ptr = arr;
+    
+    for (int i = 0; i < 3; i++) {
+        cout << *ptr << endl;
+        ptr++;
+    }
+    
+    return 0;
+}
