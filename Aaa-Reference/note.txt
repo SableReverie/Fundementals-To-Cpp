@@ -52,7 +52,7 @@ Lambda functions
 4. Arrays and Strings
 One-dimensional arrays
 Multi-dimensional arrays
-Character arrays
+Character arrays    
 C-style strings
 std::string
 String manipulation
