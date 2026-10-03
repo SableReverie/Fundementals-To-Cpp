@@ -572,7 +572,7 @@ int main() {
 }
 */
 
-
+/*
 #include <iostream>
 using namespace std;
 
@@ -585,5 +585,32 @@ int main() {
         ptr++;
     }
     
+    return 0;
+}
+    
+*/
+
+
+#include <iostream>
+#include <expected>
+#include <string>
+
+std::expected<int, std::string> divide(int a, int b)
+{
+    if (b == 0)
+        return std::unexpected(std::string("Division by zero"));
+
+    return a / b;
+}
+
+int main()
+{
+    auto result = divide(10, 2);
+
+    if (result.has_value())
+        std::cout << "Result: " << result.value() << '\n';
+    else
+        std::cout << "Error: " << result.error() << '\n';
+
     return 0;
 }
