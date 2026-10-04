@@ -280,3 +280,53 @@ catch
 
 This is the core exception-handling mechanism used throughout C++.
 */
+
+
+// Application
+
+#include <iostream>
+#include <string>
+#include <stdexcept>
+
+// 1. C++17-friendly error handling using a result object
+// std::expected is a C++23 feature, so this example uses a simple pattern
+// that works in standard C++17 and still demonstrates the same idea.
+struct DivisionResult {
+    bool ok;
+    double value;
+    std::string error;
+};
+
+DivisionResult safe_divide(double numerator, double denominator) {
+    if (denominator == 0.0) {
+        return {false, 0.0, "Division by zero error."};
+    }
+    return {true, numerator / denominator, ""};
+}
+
+// 2. Traditional C++ Exception throwing
+double standard_divide(double numerator, double denominator) {
+    if (denominator == 0.0) {
+        throw std::runtime_error("Standard exception: Division by zero.");
+    }
+    return numerator / denominator;
+}
+
+int main() {
+    std::cout << "--- 1. Result-based Error Handling (C++17 friendly) ---\n";
+    auto result = safe_divide(10.0, 0.0);
+
+    if (!result.ok) {
+        std::cout << "Caught result error: " << result.error << "\n";
+    }
+
+    std::cout << "\n--- 2. Exception Handling ---\n";
+    try {
+        standard_divide(10.0, 0.0);
+    }
+    catch (const std::exception& e) {
+        std::cerr << "Exception caught: " << e.what() << "\n";
+    }
+
+    return 0;
+}
