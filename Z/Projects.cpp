@@ -330,3 +330,33 @@ int main() {
     return 0;
 }
 */
+
+
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::string;
+using std::cin;
+
+void swapNum(int& a, int& b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+
+int main(){
+    int a, b;
+    cout << "Enter first number: ";
+    cin >> a;
+    cout << "Enter second number: ";
+    cin >> b;
+
+    swapNum(a, b);
+
+    cout << "After swapping:\n";
+    cout << "First number: " << a << endl;
+    cout << "Second number: " << b << endl;
+
+    return 0;
+}

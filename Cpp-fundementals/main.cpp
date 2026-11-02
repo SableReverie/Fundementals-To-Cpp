@@ -9,14 +9,14 @@
     - int: Used to store whole numbers (e.g., 42, -7).
     - double: Used to store floating-point numbers (e.g., 3.14, -0.001).
     - char: Used to store a single character (e.g., 'A', 'z').
-    - bool: Used to store boolean values (true or false).
+    - bool: Used to store boolean values (true or false).d
     - void: Represents the absence of a value, often used for functions that do not return anything.
     STANDARD LIBRARY DATA TYPES:
     - std::string: Used to store and manipulate sequences of characters (e.g., "Hello, World!").
     - std::vector: A dynamic array that can resize itself automatically when elements are added.
     - std::map: A collection of key-value pairs, where each key is unique and maps to a value.
     - std::set: A collection of unique elements, where each element can only appear once...
-    */
+    */         
 
 // }
 
@@ -1118,3 +1118,13 @@ int main(){
     return 0;
 }
 */
+
+#include <iostream> 
+using std::cout, std::cin, std::endl;
+
+
+struct Player{ int health = 0; int power = 0; };
+
+
+
+int main(){ return 0; }
